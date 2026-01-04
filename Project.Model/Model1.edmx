@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Person_Information">
+          <Key>
+            <PropertyRef Name="PI_Auto_ID" />
+          </Key>
+          <Property Name="PI_Auto_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PI_First_Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PI_Last_Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PI_Father_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="PI_CNIC" Type="nvarchar" MaxLength="15" />
+          <Property Name="PI_Gender" Type="nvarchar" MaxLength="10" />
+          <Property Name="PI_Date_Of_Birth" Type="date" />
+          <Property Name="PI_Phone_Number" Type="nvarchar" MaxLength="20" />
+          <Property Name="PI_Email" Type="nvarchar" MaxLength="150" />
+          <Property Name="PI_Address" Type="nvarchar" MaxLength="300" />
+          <Property Name="PI_City" Type="nvarchar" MaxLength="100" />
+          <Property Name="PI_Country" Type="nvarchar" MaxLength="100" />
+          <Property Name="PI_IsActive" Type="bit" Nullable="false" />
+          <Property Name="PI_Created_Date" Type="datetime" Nullable="false" />
+          <Property Name="PI_Created_UserID" Type="int" Nullable="false" />
+          <Property Name="PI_Edit_Date" Type="datetime" />
+          <Property Name="PI_Edit_UserID" Type="int" />
+        </EntityType>
+        <EntityContainer Name="ProjectModelStoreContainer">
+          <EntitySet Name="Person_Information" EntityType="Self.Person_Information" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Person_Information">
+          <Key>
+            <PropertyRef Name="PI_Auto_ID" />
+          </Key>
+          <Property Name="PI_Auto_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PI_First_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PI_Last_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PI_Father_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PI_CNIC" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="PI_Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PI_Date_Of_Birth" Type="DateTime" Precision="0" />
+          <Property Name="PI_Phone_Number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PI_Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="PI_Address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="PI_City" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PI_Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PI_IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="PI_Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PI_Created_UserID" Type="Int32" Nullable="false" />
+          <Property Name="PI_Edit_Date" Type="DateTime" Precision="3" />
+          <Property Name="PI_Edit_UserID" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="ProjectEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Person_Information" EntityType="Self.Person_Information" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ProjectModelStoreContainer" CdmEntityContainer="ProjectEntities">
+          <EntitySetMapping Name="Person_Information">
+            <EntityTypeMapping TypeName="ProjectModel.Person_Information">
+              <MappingFragment StoreEntitySet="Person_Information">
+                <ScalarProperty Name="PI_Auto_ID" ColumnName="PI_Auto_ID" />
+                <ScalarProperty Name="PI_First_Name" ColumnName="PI_First_Name" />
+                <ScalarProperty Name="PI_Last_Name" ColumnName="PI_Last_Name" />
+                <ScalarProperty Name="PI_Father_Name" ColumnName="PI_Father_Name" />
+                <ScalarProperty Name="PI_CNIC" ColumnName="PI_CNIC" />
+                <ScalarProperty Name="PI_Gender" ColumnName="PI_Gender" />
+                <ScalarProperty Name="PI_Date_Of_Birth" ColumnName="PI_Date_Of_Birth" />
+                <ScalarProperty Name="PI_Phone_Number" ColumnName="PI_Phone_Number" />
+                <ScalarProperty Name="PI_Email" ColumnName="PI_Email" />
+                <ScalarProperty Name="PI_Address" ColumnName="PI_Address" />
+                <ScalarProperty Name="PI_City" ColumnName="PI_City" />
+                <ScalarProperty Name="PI_Country" ColumnName="PI_Country" />
+                <ScalarProperty Name="PI_IsActive" ColumnName="PI_IsActive" />
+                <ScalarProperty Name="PI_Created_Date" ColumnName="PI_Created_Date" />
+                <ScalarProperty Name="PI_Created_UserID" ColumnName="PI_Created_UserID" />
+                <ScalarProperty Name="PI_Edit_Date" ColumnName="PI_Edit_Date" />
+                <ScalarProperty Name="PI_Edit_UserID" ColumnName="PI_Edit_UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

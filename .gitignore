@@ -1,0 +1,92 @@
+# ===================================
+# ASP.NET MVC - Full .NET Framework
+# ===================================
+
+# -------------------
+# Visual Studio files
+# -------------------
+.vs/					# Visual Studio workspace settings
+*.user                  # User-specific files
+*.suo                   # Solution user options
+*.sln.docstates         # Solution document states
+*.local                 # Local settings
+*.config.user           # User-specific config files
+*.DotSettings.user      # ReSharper user settings
+
+# -------------------
+# Build outputs
+# -------------------
+bin/
+obj/
+[Bb]uild/
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.tlog
+
+# -------------------
+# Publish outputs
+# -------------------
+publish/
+*.Publish.xml
+*.deploy
+
+# -------------------
+# IIS Express
+# -------------------
+.IISExpress/
+*.vspscc
+*.vssscc
+
+# -------------------
+# IDE-specific folders
+# -------------------
+.vscode/                # Visual Studio Code
+.idea/                  # JetBrains Rider
+_ReSharper*/            # ReSharper cache
+
+# -------------------
+# NuGet Packages
+# -------------------
+packages/
+*.nupkg
+*.snk
+
+# -------------------
+# Node / NPM (if used)
+# -------------------
+node_modules/
+
+# -------------------
+# Database
+# -------------------
+*.mdf
+*.ldf
+*.ndf
+App_Data/
+
+# -------------------
+# Logs
+# -------------------
+*.log
+*.err
+*.coverage
+*.coveragexml
+TestResults/
+*.trx
+
+# -------------------
+# Temporary / backup / swap files
+# -------------------
+*.bak
+*.swp
+~$*
+
+# -------------------
+# Misc / Others
+# -------------------
+*.vsix
+*.scc
